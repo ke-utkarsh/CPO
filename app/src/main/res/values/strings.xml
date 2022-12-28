@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">CPO</string>
+    <string name="login">Login</string>
+    <string name="createNFT">Create NFT</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="backend_is_under_mainteanace">Backend is under maintenance</string>
+    <string name="hint_searchable_spinner">Select City</string>
+    <string name="button_label_kotlin">Kotlin</string>
+    <string name="button_label_java">Java</string>
+    <string name="text_warning">Warning</string>
+    <string name="text_success">Success</string>
+    <string name="text_error">Error</string>
+    <string name="text_info">Info</string>
+    <string name="text_no_internet">No internet connection</string>
+    <string name="text_mock_description">Lorem Ipsum is simply dummy text of the printing</string>
+    <string name="str_no_data_available">No Data Available</string>
+    <string name="permission_alert">Permission Alert</string>
+    <string name="please_open_settings_go_to_permissions_and_allow_the_required_permissions">Please open settings, go to permissions and allow the required permissions.</string>
+    <string name="TIMEOUT_MSG">It took longer than expected to get the response from Server.</string>
+    <string name="ERROR_MSG">Something went wrong. Please try again.</string>
+    <string name="action_settings">Settings</string>
+    <string name="ok">Ok</string>
+    <string name="unauthorized_error">Someone else has been login with your number.</string>
+    <string name="while_loading">Please wait while image is being loaded</string>
+
+    <string name="reject">Reject</string>
+    <string name="mint">Mint</string>
+    <string name="reject_reason">Reject Reason</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="nft_has_been_minted">NFT has been Minted</string>
+    <string name="back_to_active_warranties">Back to Active Warranties</string>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_medium">20dp</dimen>
+    <dimen name="padding_high">30dp</dimen>
+    <dimen name="padding_default">10dp</dimen>
+    <dimen name="padding_low">5dp</dimen>
+    <dimen name="padding_highest">40dp</dimen>
+    <dimen name="margin_005">4dp</dimen>
+    <dimen name="margin_01">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+
+    <dimen name="dimen_0">0dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
+    <dimen name="dimen_72">72dp</dimen>
+
+</resources>
