@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="ymsli.com.cpo.data.model.AppraisalGrade" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.range}"
+            tools:text="7.2 ~"
+            style="@style/TextViewStyleLabelSizeRegular10"
+            android:textColor="@color/white"
+            android:layout_weight="1.1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.grade}"
+            tools:text="A"
+            style="@style/TextViewStyleLabelSizeRegular10"
+            android:textColor="@color/white"
+            android:layout_weight="0.8"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.vehicleCondition}"
+            tools:text="Very Good"
+            style="@style/TextViewStyleLabelSizeRegular10"
+            android:textColor="@color/white"
+            android:layout_weight="1.1"/>
+
+    </LinearLayout>
+
+</layout>
+

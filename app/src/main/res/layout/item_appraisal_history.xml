@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="ymsli.com.cpo.data.model.AppraisalHistoryResult" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/white_background"
+        android:elevation="2dp"
+        android:padding="16dp"
+        android:translationZ="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvHeading"
+            style="@style/TextViewStyleLabelSizeBold14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            tools:text="Grade A (Good)"
+            android:text="@{`Grade ` + item.grade + ` (` + item.vehicleCondition+`)`}"
+            android:textColor="@color/textHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/llDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_background"
+            android:backgroundTint="@color/dividerColor"
+            app:layout_constraintStart_toStartOf="@id/tvHeading"
+            app:layout_constraintTop_toBottomOf="@id/tvHeading">
+
+            <ImageView
+                android:id="@+id/ivCalendar"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/calendar" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                style="@style/TextViewStyleLabelSizeRegular10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@{item.date}"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textColor="@color/textHeader"
+                tools:text="28/10/2022" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_background"
+            android:backgroundTint="@color/dividerColor"
+            android:padding="6dp"
+            app:layout_constraintStart_toEndOf="@id/llDate"
+            app:layout_constraintEnd_toStartOf="@id/ivNext"
+            app:layout_constraintTop_toBottomOf="@id/tvHeading">
+
+            <ImageView
+                android:id="@+id/ivDistance"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/icon_distance_counter" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                style="@style/TextViewStyleLabelSizeRegular10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{item.tripMeterReading}"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="@color/textHeader"
+                tools:text="8732 km" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:elevation="10dp"
+            android:background="@drawable/icon_appraisal_next"
+            app:layout_constraintBottom_toBottomOf="@id/llDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/llDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/icon_good"
+            android:elevation="2dp"
+            android:padding="@dimen/_5sdp"
+            android:translationZ="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

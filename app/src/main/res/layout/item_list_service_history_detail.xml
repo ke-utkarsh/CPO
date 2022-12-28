@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="#FF0000"/>
+            <TextView
+                android:id="@+id/tvIssueHead"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                style="@style/TextViewStyleLabelSizeBold12"
+                tools:text="Engine Oil Leakage"
+                android:textColor="@color/textHeader"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+       <TextView
+            android:id="@+id/tvIssueDescription"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:maxLength="50"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
+            tools:text="Control 5W- Fully"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="6dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:orientation="horizontal"
+                android:background="@drawable/gray_background">
+
+                <ymsli.com.cpo.utils.VerticalTextView
+                    style="@style/verticalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:gravity="bottom|right"
+                    android:layout_gravity="center_vertical"
+                    android:text="Before" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBeforeImages"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_image_design" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="6dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:background="@drawable/gray_background"
+                android:orientation="horizontal">
+
+                <ymsli.com.cpo.utils.VerticalTextView
+                    style="@style/verticalTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="bottom|right"
+                    android:text="After" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAfterImages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_image_design" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/vwDividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/divider_background" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="ymsli.com.cpo.data.model.LineResult" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="#FF0000"/>
+            <TextView
+                android:id="@+id/tvIssueHead"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                style="@style/TextViewStyleLabelSizeBold12"
+                android:text="@{item.LineItem.Description}"
+                tools:text="Change Tires"
+                android:textColor="@color/textHeader"
+                android:layout_height="wrap_content"/>
+
+
+            <ImageView
+                android:id="@+id/ivDeleteIssue"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:background="@drawable/close"
+                />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etIssue1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Enter Brand Name"
+            android:maxLength="50"
+            android:text="@={item.lineDesc}"
+            android:textColor="@color/textHeader"
+            android:textColorHint="@color/textColorGray"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="6dp"
+            android:orientation="horizontal">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvConcernedImages"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_image_design" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_3sdp"
+                android:elevation="1dp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:translationZ="1dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:id="@+id/ivClickConcernedIssueImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/_15sdp"
+                        android:src="@drawable/camera"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/concernedIssueImageProgress"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/vwDividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@drawable/divider_background" />
+
+    </LinearLayout>
+</layout>

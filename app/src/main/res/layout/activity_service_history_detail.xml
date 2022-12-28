@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="ymsli.com.cpo.data.model.MaintenanceList"/>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGray"
+        tools:context=".ui.view.activity.ServiceSubmitActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_grey_arrow_back"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/textHeader" />
+
+            <TextView
+                android:id="@+id/tvPageHead"
+                style="@style/TextViewStyleLabelSizeRegular16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                tools:text="JobCard - #J0015968"
+                android:text="@{`JobCard - `+item.maintenanceId.toString().substring(24).toUpperCase()}"
+                android:textColor="@color/textHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clJobCardIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_background"
+            app:layout_constraintTop_toBottomOf="@id/clToolbar"
+            android:layout_margin="15dp"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:translationZ="2dp">
+
+            <ImageView
+                android:id="@+id/ivServiceIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:tint="#00CDAC"
+                android:background="@drawable/icon_repair"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvJobCardId"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                style="@style/TextViewStyleLabelSizeBold12"
+                tools:text="Job Card - #0012-86548"
+                android:text="@{`JobCard - `+item.maintenanceId.toString().substring(24).toUpperCase()}"
+                android:textColor="@color/textHeader"
+                app:layout_constraintStart_toEndOf="@id/ivServiceIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvJobVin"
+                style="@style/TextViewStyleLabelSizeRegular8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                tools:text="VIN - 123456789"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp"
+                android:textColor="@color/textColorGray"
+                app:layout_constraintStart_toEndOf="@id/ivServiceIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvJobCardId"/>
+
+            <TextView
+                android:id="@+id/tvTxHashHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tx Hash    :"
+                style="@style/TextViewStyleLabelSizeMedium12"
+                android:textColor="@color/textHeader"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvJobVin"
+                app:layout_constraintStart_toEndOf="@id/ivServiceIcon"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tvTxHash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="@{``+item.txHash}"
+                style="@style/TextViewStyleLabelSizeMedium12"
+                android:textColor="@color/blueColor"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvJobVin"
+                app:layout_constraintStart_toEndOf="@id/tvTxHashHeading"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvMetadataHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metadata :"
+                style="@style/TextViewStyleLabelSizeMedium12"
+                android:textColor="@color/textHeader"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTxHashHeading"
+                app:layout_constraintStart_toEndOf="@id/ivServiceIcon"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tvMetadata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:text="@{``+item.serviceMetadataIpfsCid}"
+                style="@style/TextViewStyleLabelSizeMedium12"
+                android:textColor="@color/blueColor"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvTxHashHeading"
+                app:layout_constraintStart_toEndOf="@id/tvTxHashHeading"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/vwDividerLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/divider_background"
+                app:layout_constraintTop_toBottomOf="@id/tvMetadata"/>
+
+            <ImageView
+                android:id="@+id/ivServiceCenter"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dealer_image"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/vwDividerLine"
+                app:layout_constraintBottom_toBottomOf="@id/tvServiceCenterName"/>
+
+            <TextView
+                android:id="@+id/tvServiceCenterName"
+                android:layout_width="0dp"
+                style="@style/TextViewStyleLabelSizeBold12"
+                android:layout_marginStart="10dp"
+                android:maxLines="2"
+                android:text="@{item.dealer.name + `(Authorized Yamaha Dealer)`}"
+                tools:text="Northern Motors (Authorized Yamaha Dealer)"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/textHeader"
+                app:layout_constraintTop_toBottomOf="@id/vwDividerLine"
+                app:layout_constraintStart_toEndOf="@id/ivServiceCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+                android:id="@+id/llDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_background"
+                android:backgroundTint="@color/dividerColor"
+                app:layout_constraintStart_toEndOf="@id/ivServiceCenter"
+
+                app:layout_constraintTop_toBottomOf="@id/tvServiceCenterName">
+
+                <ImageView
+                    android:id="@+id/ivCalendar"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    style="@style/TextViewStyleLabelSizeRegular10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@{item.Date}"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/textHeader"
+                    tools:text="28/10/2022" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTripMeter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_background"
+                android:backgroundTint="@color/dividerColor"
+                app:layout_constraintStart_toEndOf="@id/llDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvServiceCenterName">
+
+                <ImageView
+                    android:id="@+id/ivMeter"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/icon_distance_counter" />
+
+                <TextView
+                    android:id="@+id/tvMeterReading"
+                    style="@style/TextViewStyleLabelSizeRegular10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@{item.tripMeterReading+` km`}"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:textColor="@color/textHeader"
+                    tools:text="14,580 Km" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vwDividerLine2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/divider_background"
+                app:layout_constraintTop_toBottomOf="@id/llDate"/>
+
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                style="@style/TextViewStyleLabelSizeBold16"
+                android:text="@{`$ `+item.totalMaintenanceCost + `/-`}"
+                tools:text="$ 1024"
+                android:textColor="@color/textHeader"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/vwDividerLine2"
+                app:layout_constraintEnd_toEndOf="@id/vwDividerLine2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:text="Total service price including taxes: "
+                app:layout_constraintTop_toTopOf="@+id/tvPrice"
+                app:layout_constraintEnd_toStartOf="@id/tvPrice"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+                tools:ignore="MissingConstraints" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvServicePartLabel"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            style="@style/TextViewStyleLabelSizeBold16"
+            android:text="Parts Serviced"
+            android:layout_margin="15dp"
+            android:textColor="@color/textHeader"
+            app:layout_constraintTop_toBottomOf="@id/clJobCardIntro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:id="@+id/llServiceHistory"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tvServicePartLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:background="@drawable/white_background"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            android:translationZ="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvServiceItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_list_service_history_detail" />
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

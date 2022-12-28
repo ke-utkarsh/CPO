@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="item"
+            type="ymsli.com.cpo.data.model.DateResult" />
+    </data>
+<LinearLayout
+    android:id="@+id/parentLayout"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_width="110dp"
+    android:layout_height="35dp"
+    android:background="@drawable/line_white_background"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="10:00 - 11:00"
+        android:textColor="@color/textHeader"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_12sdp"
+        />
+
+
+
+
+</LinearLayout>
+</layout>

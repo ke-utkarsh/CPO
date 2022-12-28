@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/_2sdp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+
+            <TextView
+                android:id="@+id/tvTextReachedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center"
+                android:text="Reached At"
+                android:textColor="#2D2943"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tvReachedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTextReachedTime"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="10:16"
+                android:textColor="#c49616"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvTextScheduleTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvReachedTime"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="Scheduled At"
+                android:textColor="#2D2943"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/tvScheduleTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTextScheduleTime"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="11:16"
+                android:textColor="#c49616"
+                android:textSize="9sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/ivInitialChildBusStand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/second_source" />
+
+            <ImageView
+                android:id="@+id/ivTopLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp"
+                android:layerType="software"
+                android:layout_below="@+id/ivInitialChildBusStand"
+                android:src="@drawable/gray_vertical_line" />
+
+            <ImageView
+                android:id="@+id/ivChildBusStand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivTopLine"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/second_source" />
+
+            <ImageView
+                android:id="@+id/ivChildBottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layerType="software"
+                android:layout_below="@+id/ivChildBusStand"
+                android:src="@drawable/gray_vertical_line" />
+
+            <ImageView
+                android:id="@+id/ivChildBottomLineTwo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_12sdp"
+                android:layerType="software"
+                android:layout_below="@+id/ivChildBottomLine"
+                android:src="@drawable/gray_vertical_line" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvChildBusNme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Idgah Bus Stand"
+                    android:textColor="@color/black"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/tvChangeTheBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:text="Change The Bus"
+                    android:textColor="@color/black"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/tvChildTakeBus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:text="Take Bus UP32CT3920"
+                    android:textColor="#c49616"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tvChildRouteName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Route : Kagrol to Idgah Bus Stand "
+                    android:textColor="#c49616"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tvChildInternalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13 mins , 10 kms"
+                    android:textColor="#c49616"
+                    android:textSize="8sp" />
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

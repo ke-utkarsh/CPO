@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvWarranties"
+    android:layout_width="@dimen/_50sdp"
+    android:layout_height="@dimen/_50sdp"
+    android:layout_margin="@dimen/_3sdp"
+    app:cardCornerRadius="10dp"
+    android:elevation="1dp"
+    android:translationZ="1dp"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/ivVehicleImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/error_photo" />
+
+    <ImageView
+        android:id="@+id/deleteImage"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@drawable/close"
+
+        />
+
+</androidx.cardview.widget.CardView>
+</layout>
