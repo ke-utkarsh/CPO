@@ -1,3 +1,4 @@
+/** QR Code Activity**/
 package ymsli.com.cpo.ui.view.activity
 
 import android.Manifest
